@@ -10,7 +10,7 @@ TryOutSDK.init({
 });
 
 const App = () => {
-	const [ scheme, setScheme ] = useState("client_dark");
+	const [ scheme, setScheme ] = useState("client_light");
 	VKConnect.subscribe(({ detail: { type, data } }) => type === "VKWebAppUpdateConfig" ? setScheme(data.scheme) : null);
 	return (
 		<ConfigProvider isWebView scheme={scheme}>
